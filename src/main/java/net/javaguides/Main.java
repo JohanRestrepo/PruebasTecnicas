@@ -25,6 +25,8 @@ public class Main {
         System.out.println(sumaPares(numeros));
         String [] palabras = {"Jose", "Tomas", "Anastacio"};
         System.out.println(ordenar(palabras));
+        CuentaBancaria bancolombia = new CuentaBancaria("Johan" , 12000);
+        bancolombia.mostrarSaldo();
     }
 
     public static String parOImpar(int numero) {
