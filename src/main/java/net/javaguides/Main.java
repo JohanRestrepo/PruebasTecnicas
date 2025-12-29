@@ -14,6 +14,14 @@ public class Main {
         System.out.println(eliminarDuplicados(listaNombres));
         Persona johan = new Persona("Johan", 31);
         System.out.println(johan.esMayorDeEdad());
+        Producto producto1 = new Producto("Arroz", 1000);
+        Producto producto2 = new Producto("mani", 600);
+        Producto producto3 = new Producto("anteojos", 2000);
+        Producto producto4 = new Producto("panela", 700);
+        List<Producto> listaProductos = List.of(producto1,producto2,producto3,producto4);
+        System.out.println(calcularTotal(listaProductos));
+
+
     }
 
     public static String parOImpar(int numero) {
@@ -58,5 +66,13 @@ public class Main {
             }
         }
         return nuevalistaNombres;
+    }
+
+    public static double calcularTotal(List<Producto> productos) {
+        double total = 0;
+        for (int i = 0; i < productos.size(); i++) {
+            total += productos.get(i).getPrecio();
+        }
+        return total;
     }
 }
