@@ -1,6 +1,5 @@
 package net.javaguides;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -21,8 +20,11 @@ public class Main {
         List<Producto> listaProductos = List.of(producto1,producto2,producto3,producto4);
         System.out.println(calcularTotal(listaProductos));
         System.out.println(contarVocales("esto es una prueba"));
-
-
+        System.out.println(esPalindromo("anilina"));
+        int [] numeros = {9,4,6,5,8,7};
+        System.out.println(sumaPares(numeros));
+        String [] palabras = {"Jose", "Tomas", "Anastacio"};
+        System.out.println(ordenar(palabras));
     }
 
     public static String parOImpar(int numero) {
@@ -89,5 +91,31 @@ public class Main {
         return conteo;
     }
 
+    public static boolean esPalindromo(String texto) {
+        String reversa = "";
+        for (int i = texto.length()-1; i >= 0; i--) {
+            reversa += texto.charAt(i);
+        }
+        if(texto.equals(reversa)){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
+    public static int sumaPares(int[] numeros) {
+        int aux = 0;
+        for (int i = 0; i < numeros.length; i++) {
+            if(numeros[i] % 2 == 0){
+                aux += numeros[i];
+            }
+        }
+        return aux;
+    }
+
+    public static List<String> ordenar(String[] nombres) {
+        List<String> nombresOrdenados = Arrays.asList(nombres);
+        Collections.sort(nombresOrdenados);
+        return nombresOrdenados;
+    }
 }
