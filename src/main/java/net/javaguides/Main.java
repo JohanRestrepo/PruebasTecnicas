@@ -12,6 +12,8 @@ public class Main {
         System.out.println(obtenerMayor(listaEnteros));
         List<String> listaNombres = List.of("Daniel", "Jose", "Daniel", "Johan", "Jose");
         System.out.println(eliminarDuplicados(listaNombres));
+        Persona johan = new Persona("Johan", 31);
+        System.out.println(johan.esMayorDeEdad());
     }
 
     public static String parOImpar(int numero) {
