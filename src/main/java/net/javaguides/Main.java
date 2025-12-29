@@ -20,6 +20,7 @@ public class Main {
         Producto producto4 = new Producto("panela", 700);
         List<Producto> listaProductos = List.of(producto1,producto2,producto3,producto4);
         System.out.println(calcularTotal(listaProductos));
+        System.out.println(contarVocales("esto es una prueba"));
 
 
     }
@@ -75,4 +76,18 @@ public class Main {
         }
         return total;
     }
+
+    public static int contarVocales(String texto) {
+        String aux;
+        int conteo = 0;
+        for (int i = 0; i < texto.length(); i++) {
+            aux = String.valueOf(texto.charAt(i));
+            if(aux.equals("a") || aux.equals("e") || aux.equals("i") || aux.equals("o") || aux.equals("u")){
+                conteo ++;
+            }
+        }
+        return conteo;
+    }
+
+
 }
